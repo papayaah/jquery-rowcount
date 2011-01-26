@@ -1,0 +1,34 @@
+h1. jQuery Hint
+
+Released on July 6, 2010.
+
+Automatically adds row numbers on an existing table.
+
+h2. Screenshot of the demo
+
+!http://img132.imageshack.us/img132/9772/rowcountdemo.png!
+
+h2. To use:
+
+<pre>
+<script type="text/javascript" src="jquery.rowcount-1.0.js"></script>
+</pre>
+
+Add row numbers to all tables:
+
+<pre>
+  $('table').rowCount();
+</pre>
+
+h2. The following are the possible options:
+
+startAt - lets you start the next count at a specific number
+column - lets you display the row count at a specific column
+
+Eg,
+
+<pre>
+  $('table').rowCount({startAt:5, column:2});
+</pre>
+
+Apply as many times on an existing table to have it recount the rows.

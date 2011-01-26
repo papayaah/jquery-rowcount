@@ -1,0 +1,107 @@
+<html>
+<head>
+  <title>jQuery Row Count Plugin demo</title>
+  <style>
+    div#container {
+      width: 950px;
+      margin: 0 auto;
+      font-size: 18px;
+      margin-top: 50px;      
+    }
+  </style>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.rowcount-1.0.js"></script>
+  </script>
+
+</head>
+<body>    
+  <div id="container">
+    
+    <b>Example #1:</b></p> 
+    <table id="rowCountTable"> 
+    <thead> 
+      <tr> 
+        <th>Names</th> 
+      </tr> 
+    </thead> 
+    <tbody> 
+      <tr> 
+        <td>Daryl</td> 
+      </tr> 
+      <tr> 
+        <td>David</td> 
+      </tr> 
+      <tr> 
+        <td>Davy</td> 
+      </tr> 
+    </tbody> 
+    </table> 
+    <p> 
+    	<a href="#" onclick="$('table#rowCountTable').rowCount();return false;">Enable row count on example #1</a></p> 
+      <blockquote> 
+          <p><strong>Code:</strong></p> 
+          <p><em>$(&quot;table#rowCountTable&quot;).rowCount();</em></p> 
+      </blockquote> 
+    <p> 
+    	<b>Example #2:</b></p> 
+    <table id="rowCountTable2"> 
+    <thead> 
+    <tr> 
+      <th>&nbsp;</th> 
+      <th class="rowCount"></th> 
+      <th>Names</th> 
+    </tr> 
+    </thead> 
+    <tbody> 
+      <tr> 
+        <td><input type="checkbox" /></td> 
+        <td>5.</td> 
+        <td>Daryl</td> 
+      </tr> 
+      <tr id="row-to-remove"> 
+        <td><input type="checkbox" /></td> 
+        <td>6.</td> 
+        <td>David</td> 
+      </tr> 
+      <tr> 
+        <td><input type="checkbox" /></td> 
+        <td>7.</td> 
+        <td>Davy</td> 
+      </tr> 
+    </tbody> 
+    </table> 
+    <p> 
+    	<a href="#" onclick="$('tr#row-to-remove').remove();$('table#rowCountTable2').rowCount({startAt:5, column:2});return false;">Remove row on example #2</a></p> 
+    <blockquote> 
+    <p> 
+    		<strong>Code:</strong></p> 
+    <p> 
+    		<em>$(&quot;table#rowCountTable&quot;).rowCount({startAt:5, column:2});</em></p> 
+    </blockquote> 
+    <p> 
+    	There are only 2 options:</p> 
+    <ul> 
+    <li> 
+    		<em>startAt</em> -&nbsp;lets you&nbsp;start the next count at a specific number</li> 
+    <li> 
+    		<em>column</em> - lets you display the row count at a specific column</li> 
+    </ul> 
+    <p> 
+    	It also creates 2 css classes:</p> 
+    <ul> 
+    <li> 
+    		<em>rowCount&nbsp;-</em>&nbsp;for the column headers</li> 
+    <li> 
+    		<em>rowNumber - </em>for the cells</li> 
+    </ul> 
+    
+    <p> 
+    	Apply as many times on an existing table to have it recount the rows - as shown on example #2
+    </p> 
+    
+    
+  </div>
+  
+</body>
+  
+  
